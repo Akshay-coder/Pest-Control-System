@@ -1,0 +1,9 @@
+<select name='Employee' id='Employee' style='width:300px ;height:30px; -moz-border-radius: 10px; border-radius: 8px;  border:1px ;padding:5px;'>
+<option>Select Employee</option>";
+$qry1="select ename from employee";
+$res1=pg_query($conn,$qry1);
+while($arr2=pg_fetch_assoc($res1))
+{
+echo '<option value="'.$arr2['ename'].'">'.$arr2['ename'].'</option>';
+}
+echo "</select>";
